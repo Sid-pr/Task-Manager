@@ -33,33 +33,19 @@ This project was built as part of the **Oritso Entry Level IT Assignment** to de
 
 ### Task List
 
-```
 <img width="2382" height="691" alt="image" src="https://github.com/user-attachments/assets/1272f0d9-7e66-401b-8be7-fcf4e9d58d38" />
 
-```
-
----
 
 ### Add Task Form
 
 
-```
 <img width="1120" height="1741" alt="image" src="https://github.com/user-attachments/assets/06b9021f-d0cf-4612-aacc-fa21a2d0760c" />
 
-```
-
----
 
 ### Expandable Task Description
 
-
-
-```
 <img width="2530" height="1000" alt="image" src="https://github.com/user-attachments/assets/1ec6f3bc-adbd-46d0-a9bb-94e27130ab68" />
 
-```
-
----
 
 # 3. Database Design
 
