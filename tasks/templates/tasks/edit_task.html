@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+<div class="card-header bg-warning">
+Edit Task
+</div>
+
+<div class="card-body">
+
+<form method="POST">
+
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<button class="btn btn-primary">Update Task</button>
+
+<a class="btn btn-secondary" href="/">Cancel</a>
+
+</form>
+
+</div>
+
+</div>
+
+{% endblock %}

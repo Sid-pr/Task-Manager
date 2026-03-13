@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+<div class="card-header bg-primary text-white">
+Add New Task
+</div>
+
+<div class="card-body">
+
+<form method="POST">
+
+{% csrf_token %}
+
+<div class="mb-3">
+<label>Title</label>
+{{ form.title }}
+</div>
+
+<div class="mb-3">
+<label>Description</label>
+{{ form.description }}
+</div>
+
+<div class="mb-3">
+<label>Due Date</label>
+{{ form.due_date }}
+</div>
+
+<div class="mb-3">
+<label>Status</label>
+{{ form.status }}
+</div>
+
+<div class="mb-3">
+<label>Remarks</label>
+{{ form.remarks }}
+</div>
+
+<div class="mb-3">
+<label>Created By</label>
+{{ form.created_by }}
+</div>
+
+<div class="mb-3">
+<label>Updated By</label>
+{{ form.updated_by }}
+</div>
+
+<button class="btn btn-success">Save Task</button>
+
+</form>
+
+</div>
+</div>
+
+{% endblock %}

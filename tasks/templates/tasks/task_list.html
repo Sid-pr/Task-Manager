@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-3">Task List</h2>
+<div class="mb-3">
+
+<a href="/tasks/" class="btn btn-dark btn-sm">All</a>
+
+<a href="/tasks/?filter=pending" class="btn btn-warning btn-sm">
+Pending
+</a>
+
+<a href="/tasks/?filter=completed" class="btn btn-success btn-sm">
+Completed
+</a>
+
+<a href="/tasks/?filter=overdue" class="btn btn-danger btn-sm">
+Overdue
+</a>
+
+</div>
+<table class="table table-bordered">
+
+<thead class="table-dark">
+
+<tr>
+<th>Title</th>
+<th>Status</th>
+<th>Due Date</th>
+<th>Actions</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for task in tasks %}
+
+<tr 
+data-bs-toggle="collapse" 
+data-bs-target="#task{{task.id}}" 
+style="cursor:pointer"
+>
+
+<td>{{ task.title }}</td>
+
+<td>
+
+{% if task.status == "Completed" %}
+<span class="badge bg-success">Completed</span>
+{% else %}
+<span class="badge bg-warning text-dark">Pending</span>
+{% endif %}
+
+</td>
+
+<td>{{ task.due_date }}</td>
+
+<td>
+
+<a class="btn btn-sm btn-primary" href="/edit/{{task.id}}">Edit</a>
+
+<a class="btn btn-sm btn-danger" href="/delete/{{task.id}}">Delete</a>
+
+</td>
+
+</tr>
+
+
+<tr class="collapse" id="task{{task.id}}">
+
+<td colspan="4">
+
+<strong>Description:</strong>
+
+<p>{{ task.description }}</p>
+
+<strong>Remarks:</strong>
+
+<p>{{ task.remarks }}</p>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endblock %}
