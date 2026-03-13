@@ -37,11 +37,6 @@ Overdue
 
 {% for task in tasks %}
 
-<tr 
-data-bs-toggle="collapse" 
-data-bs-target="#task{{task.id}}" 
-style="cursor:pointer"
->
 
 <td>{{ task.title }}</td>
 
@@ -64,7 +59,11 @@ style="cursor:pointer"
 <a class="btn btn-sm btn-danger" href="/delete/{{task.id}}">Delete</a>
 
 </td>
-
+<tr 
+data-bs-toggle="collapse" 
+data-bs-target="#task{{task.id}}" 
+style="cursor:pointer"
+>
 </tr>
 
 
