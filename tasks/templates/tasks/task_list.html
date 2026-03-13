@@ -37,8 +37,25 @@ Overdue
 
 {% for task in tasks %}
 
+<tr>
 
-<td>{{ task.title }}</td>
+<td>
+
+<a 
+data-bs-toggle="collapse"
+href="#task{{task.id}}"
+role="button"
+aria-expanded="false"
+class="task-toggle"
+>
+
+<span>{{ task.title }}</span>
+
+<span class="arrow">▼</span>
+
+</a>
+
+</td>
 
 <td>
 
@@ -54,16 +71,16 @@ Overdue
 
 <td>
 
-<a class="btn btn-sm btn-primary" href="/edit/{{task.id}}">Edit</a>
+<a class="btn btn-sm btn-primary" href="/edit/{{task.id}}">
+Edit
+</a>
 
-<a class="btn btn-sm btn-danger" href="/delete/{{task.id}}">Delete</a>
+<a class="btn btn-sm btn-danger" href="/delete/{{task.id}}">
+Delete
+</a>
 
 </td>
-<tr 
-data-bs-toggle="collapse" 
-data-bs-target="#task{{task.id}}" 
-style="cursor:pointer"
->
+
 </tr>
 
 
@@ -86,7 +103,7 @@ style="cursor:pointer"
 {% endfor %}
 
 </tbody>
-
+  
 </table>
 
 {% endblock %}
