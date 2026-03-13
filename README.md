@@ -472,6 +472,6 @@ These improvements can transform the current system into a **full-featured produ
 
 # 12. Author
 
-*Siddhant Pratap Singh
-*B.Tech Computer Science
-*ABES Institute of Technology
+* Siddhant Pratap Singh
+* B.Tech Computer Science
+* ABES Institute of Technology
