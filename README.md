@@ -384,7 +384,93 @@ The application showcases fundamental skills in **backend development, frontend 
 
 ---
 
-# 10. Author
+# 10. System Architecture Diagram
+
+The system follows a layered architecture where the user interacts with the frontend interface, which communicates with the Django backend. The backend processes the request, interacts with the database, and returns the response to the user.
+
+### Architecture Flow
+
+```
+User (Browser)
+       |
+       v
+Frontend (HTML + Bootstrap + Django Templates)
+       |
+       v
+Django Views (Business Logic)
+       |
+       v
+Django Models (ORM)
+       |
+       v
+MySQL Database
+```
+
+### Explanation
+
+1. **User Interface Layer**
+
+   * The user interacts with the system through web pages built with HTML and Bootstrap.
+   * Django templates dynamically render data on the frontend.
+
+2. **Application Logic Layer**
+
+   * Django views handle user requests and implement business logic.
+   * CRUD operations are processed here.
+
+3. **Data Access Layer**
+
+   * Django Models interact with the MySQL database using Django ORM.
+   * The ORM converts Python code into SQL queries.
+
+4. **Database Layer**
+
+   * The MySQL database stores task-related information including title, description, due date, and status.
+
+This layered architecture improves maintainability, scalability, and separation of concerns.
+
+---
+
+# 11. Future Improvements
+
+Although the current system provides complete task management functionality, several improvements can further enhance the application.
+
+### 1. User Authentication System
+
+Allow users to register and log in so that each user can manage their own tasks securely.
+
+### 2. Email Notifications
+
+Send email reminders to users when task deadlines are approaching.
+
+### 3. Task Categories
+
+Allow tasks to be grouped into categories such as Work, Study, Personal, etc.
+
+### 4. File Attachments
+
+Allow users to attach documents or files to tasks.
+
+### 5. API Integration
+
+Create REST APIs using Django REST Framework to allow mobile or third-party integrations.
+
+### 6. Charts and Analytics
+
+Add graphical dashboards displaying statistics such as task completion rate and productivity trends.
+
+### 7. Real-Time Notifications
+
+Use WebSockets or background workers to notify users when tasks become overdue.
+
+### 8. Mobile Application
+
+Develop a mobile version of the application using the backend APIs.
+
+These improvements can transform the current system into a **full-featured productivity management platform**.
+
+
+# 12. Author
 
 Siddhant Pratap Singh
 B.Tech Computer Science
