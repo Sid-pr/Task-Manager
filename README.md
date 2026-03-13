@@ -27,11 +27,7 @@ This project was built as part of the **Oritso Entry Level IT Assignment** to de
 
 ### Dashboard
 
-
-```
 <img width="2465" height="723" alt="image" src="https://github.com/user-attachments/assets/20069d8b-b24d-4859-bdec-7b27a2a1a07d" />
-
-```
 
 ---
 
